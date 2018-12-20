@@ -13,7 +13,7 @@ It is a GO port of https://github.com/PabloSichert/random-hash
     randomHash := randomhash.New("")
 	result, err := randomHash.GenerateHash(10) //setting hash length
 	if err != nil {
-		t.Error(err)
+		panic(err)
 	}
     fmt.Printf("random hash %s", result) //Dgc2iUZLeR
     
@@ -25,7 +25,7 @@ It is a GO port of https://github.com/PabloSichert/random-hash
     randomHash := randomhash.New(charset)
 	result, err := randomHash.GenerateHash(5) //setting hash length
 	if err != nil {
-		t.Error(err)
+		panic(err)
 	}
     fmt.Printf("random hash %s", result) //🤑✋🤒😍🤑
 ```
