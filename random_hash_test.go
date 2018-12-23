@@ -16,6 +16,14 @@ func TestCharLength(t *testing.T) {
 	}
 }
 
+func BenchmarkGenHash(b *testing.B) {
+	randomHash := New("")
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		randomHash.GenerateHash(10)
+	}
+
+}
 func TestGenHash(t *testing.T) {
 
 	charset := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
